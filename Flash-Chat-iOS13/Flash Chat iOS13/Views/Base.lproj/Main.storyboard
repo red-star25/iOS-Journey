@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2mg-oy-qij">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F4p-8i-YBF">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -29,7 +29,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="5v2-hE-4Ub" kind="show" id="msQ-wl-DxH"/>
+                                    <segue destination="5v2-hE-4Ub" kind="show" id="KH4-EY-QEq"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚡️FlashChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="y7D-jv-BlJ" customClass="CLTypingLabel" customModule="CLTypingLabel">
@@ -53,7 +53,7 @@
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="5Sl-ss-kSW"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="OX0-ND-vWO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -72,7 +72,7 @@
                             <constraint firstItem="y7D-jv-BlJ" firstAttribute="centerX" secondItem="H86-OM-sMN" secondAttribute="centerX" id="vNd-pq-rnh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hDx-NY-rzs"/>
+                    <navigationItem key="navigationItem" id="Ieg-Sa-rPQ"/>
                     <connections>
                         <outlet property="titleLabel" destination="y7D-jv-BlJ" id="7U9-Ah-qfi"/>
                     </connections>
@@ -90,7 +90,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Scg-da-zi8" userLabel="EmailView">
-                                <rect key="frame" x="0.0" y="140" width="414" height="177"/>
+                                <rect key="frame" x="0.0" y="150" width="414" height="177"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="y0w-xD-C7r">
                                         <rect key="frame" x="0.0" y="20" width="414" height="137"/>
@@ -115,7 +115,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5s-Lc-WfT" userLabel="PasswordView">
-                                <rect key="frame" x="0.0" y="217" width="414" height="177"/>
+                                <rect key="frame" x="0.0" y="227" width="414" height="177"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3X-Pg-CWg">
                                         <rect key="frame" x="0.0" y="126" width="414" height="51"/>
@@ -165,11 +165,11 @@
                             <constraint firstItem="j5s-Lc-WfT" firstAttribute="top" secondItem="Scg-da-zi8" secondAttribute="bottom" constant="-100" id="wib-t6-dnB"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="JWH-V1-F9w"/>
+                    <navigationItem key="navigationItem" id="js8-D5-zb7"/>
                     <connections>
                         <outlet property="emailTextfield" destination="u72-XV-6FN" id="Nfc-8N-TNr"/>
                         <outlet property="passwordTextfield" destination="hLb-P9-NkF" id="uaM-fo-m8M"/>
-                        <segue destination="lwd-AH-u8E" kind="show" identifier="RegisterToChat" id="KtY-SZ-FjP"/>
+                        <segue destination="lwd-AH-u8E" kind="show" identifier="RegisterToChat" id="baf-ya-2xM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -185,12 +185,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mkq-A4-A98" userLabel="EmailView">
-                                <rect key="frame" x="0.0" y="140" width="414" height="177"/>
+                                <rect key="frame" x="0.0" y="150" width="414" height="177"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="QWh-LN-1WE">
                                         <rect key="frame" x="0.0" y="20" width="414" height="137"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F21-w0-z4z">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1@2.com" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F21-w0-z4z">
                                         <rect key="frame" x="49" y="51" width="317" height="45"/>
                                         <color key="textColor" name="BrandBlue"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -210,12 +210,12 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7JT-7R-lw4" userLabel="PasswordView">
-                                <rect key="frame" x="0.0" y="217" width="414" height="177"/>
+                                <rect key="frame" x="0.0" y="227" width="414" height="177"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="mZe-tG-Gm8">
                                         <rect key="frame" x="0.0" y="20" width="414" height="137"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abR-gz-opL">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abR-gz-opL">
                                         <rect key="frame" x="49" y="48" width="317" height="45"/>
                                         <color key="textColor" name="BrandBlue"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -260,11 +260,11 @@
                             <constraint firstItem="7JT-7R-lw4" firstAttribute="top" secondItem="Mkq-A4-A98" secondAttribute="bottom" constant="-100" id="yL0-RW-8ad"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="tLS-zd-NOS"/>
+                    <navigationItem key="navigationItem" id="kJ0-UU-sic"/>
                     <connections>
                         <outlet property="emailTextfield" destination="F21-w0-z4z" id="YUG-Hl-Rxj"/>
                         <outlet property="passwordTextfield" destination="abR-gz-opL" id="xCU-X2-hrx"/>
-                        <segue destination="lwd-AH-u8E" kind="show" identifier="LoginToChat" id="a4p-H6-wfA"/>
+                        <segue destination="lwd-AH-u8E" kind="show" identifier="LoginToChat" id="q0V-UE-gy9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XcE-Gk-YZg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -280,14 +280,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S6L-hg-cne">
-                                <rect key="frame" x="0.0" y="140" width="414" height="628"/>
+                                <rect key="frame" x="0.0" y="150" width="414" height="618"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" id="fAI-uC-s9a">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fAI-uC-s9a" id="X3e-Th-Y6O">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -344,9 +344,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Q5u-eL-Bgp">
-                        <barButtonItem key="rightBarButtonItem" title="LogOut" id="tAK-1u-QPk">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="281-5x-KXY">
                             <connections>
-                                <action selector="logOutPressed:" destination="lwd-AH-u8E" id="D8d-70-fiZ"/>
+                                <action selector="logOutPressed:" destination="lwd-AH-u8E" id="pf9-WG-VRt"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -360,26 +360,26 @@
             <point key="canvasLocation" x="2942.0289855072465" y="134.59821428571428"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="cSo-RT-Mkj">
+        <scene sceneID="GJ7-gZ-v6o">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2mg-oy-qij" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F4p-8i-YBF" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="w5J-R4-ygX">
-                        <rect key="frame" x="0.0" y="96" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IPI-pH-ePO">
+                        <rect key="frame" x="0.0" y="96" width="414" height="54"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Tim-3B-f4n" kind="relationship" relationship="rootViewController" id="omB-uZ-Cs9"/>
+                        <segue destination="Tim-3B-f4n" kind="relationship" relationship="rootViewController" id="Vxr-zT-d2w"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zAT-oa-Vav" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J3N-4h-PSJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-86.956521739130437" y="134.59821428571428"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="a4p-H6-wfA"/>
+        <segue reference="q0V-UE-gy9"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>
@@ -400,7 +400,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemTealColor">
-            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.76470588235294112" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

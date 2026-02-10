@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import FirebaseAuth
 
 class ChatViewController: UIViewController {
@@ -16,37 +17,34 @@ class ChatViewController: UIViewController {
     
     var messages: [Message] = [
         Message(sender: "1@2.com", body: "Hey!"),
-        Message(sender: "2@1.com", body: "Hello!"),
-        Message(sender: "1@2.com", body: "How are you!")
+        Message(sender: "b@a.com", body: "Hello!"),
+        Message(sender: "1@2.com", body: "Hru!")
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = K.appName
         navigationItem.hidesBackButton = true
+        title = K.appName
         tableView.dataSource = self
-
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
     }
     
+
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
-        let firebaseAuth = Auth.auth()
         do {
-          try firebaseAuth.signOut()
+            try Auth.auth().signOut()
             navigationController?.popToRootViewController(animated: true)
         } catch let signOutError as NSError {
           print("Error signing out: %@", signOutError)
         }
-        
     }
-    
 }
 
 extension ChatViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        messages.count
+        return messages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -54,6 +52,4 @@ extension ChatViewController: UITableViewDataSource {
         cell.textLabel?.text = messages[indexPath.row].body
         return cell
     }
-    
-    
 }

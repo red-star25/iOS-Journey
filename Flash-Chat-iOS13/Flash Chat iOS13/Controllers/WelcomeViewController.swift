@@ -6,8 +6,8 @@
 //  Copyright © 2019 Angela Yu. All rights reserved.
 //
 
-import UIKit
 import CLTypingLabel
+import UIKit
 
 class WelcomeViewController: UIViewController {
 
@@ -15,8 +15,8 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         titleLabel.text = K.appName
-       
     }
     
 
