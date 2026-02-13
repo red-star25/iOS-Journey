@@ -12,7 +12,7 @@ struct MomentsView: View {
     @State private var showCreateMoment = false
     
     @Query(sort: \Moment.timeStamp)
-    private var moment: [Moment]
+    private var moments: [Moment]
     
     
     var body: some View {
@@ -21,7 +21,7 @@ struct MomentsView: View {
                 pathItems.frame(maxWidth: .infinity)
             }
             .overlay {
-                if moment.isEmpty {
+                if moments.isEmpty {
                     ContentUnavailableView {
                         Label("No moments yet!", systemImage: "exclamationmark.circle.fill")
                     } description: {
@@ -46,8 +46,13 @@ struct MomentsView: View {
     }
     
     private var pathItems: some View {
-        ForEach(moment) { moment in
-            Text(moment.title)
+        ForEach(moments) { moment in
+            NavigationLink {
+                MomentDetailView(moment: moment)
+            } label: {
+                Text(moment.title)
+            }
+            
         }
     }
 }
