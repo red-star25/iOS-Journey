@@ -8,6 +8,7 @@
 import SwiftData
 import SwiftUI
 
+
 @Observable
 @MainActor //Everything inside this class must run on the main thread
 class DataContainer {

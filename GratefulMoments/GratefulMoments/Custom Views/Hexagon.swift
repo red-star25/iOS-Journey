@@ -1,0 +1,51 @@
+//
+//  Hexagon.swift
+//  GratefulMoments
+//
+//  Created by Dhruv Nakum on 2/12/26.
+//
+
+import SwiftUI
+
+struct Hexagon<Content: View>: View {
+    private let borderWidth = 2.0
+    var borderColor: Color = .ember
+    var size: CGFloat = 350
+    var layout: HexagonLayout = .standard
+    var moment: Moment? = nil
+    @ViewBuilder var content: () -> Content
+    
+    var body: some View {
+        ZStack {
+            if let background = moment?.image {
+                Image(uiImage: background)
+                    .resizable()
+                    .scaledToFill()
+            }
+            content()
+                .frame(width: layout.size,height: layout.size)
+        }
+        .mask {
+            Image(systemName: "hexagon.fill")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: layout.size - borderWidth,height: layout.size - borderWidth)
+        }
+        .background {
+            Image(systemName: "hexagon")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: layout.size,height: layout.size)
+                .foregroundStyle(borderColor)
+        }
+        .frame(width: layout.size,height: layout.size)
+    }
+}
+
+#Preview {
+    Hexagon(moment: Moment.imageSample) {
+        Text(Moment.imageSample.title)
+            .foregroundColor(Color.white)
+    }
+    .sampleDataContainer()
+}
