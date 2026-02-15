@@ -23,9 +23,13 @@ struct ShopView: View {
                         .frame(maxWidth: .infinity,maxHeight: .infinity)
                 } else {
                     List(viewModel.products) {product in
-                        VStack(alignment: .leading) {
+                        NavigationLink {
                             Text(product.title)
-                            Text("$\(product.price, specifier: "%.2f")")
+                        } label: {
+                            VStack(alignment: .leading) {
+                                Text(product.title)
+                                Text("$\(product.price, specifier: "%.2f")")
+                            }
                         }
                     }
                 }
