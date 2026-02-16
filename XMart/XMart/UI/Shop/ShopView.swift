@@ -24,7 +24,7 @@ struct ShopView: View {
                 } else {
                     List(viewModel.products) {product in
                         NavigationLink {
-                            Text(product.title)
+                            ProductDetailView(product: product)
                         } label: {
                             VStack(alignment: .leading) {
                                 Text(product.title)
@@ -36,7 +36,7 @@ struct ShopView: View {
             }
             .navigationTitle("Shop")
         }
-        .task {
+        .task { //Adds an asynchronous task to perform before this view appears
             await viewModel.loadProducts()
         }
     }
