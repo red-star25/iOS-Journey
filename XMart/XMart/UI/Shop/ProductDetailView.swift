@@ -10,7 +10,7 @@ import SwiftUI
 struct ProductDetailView: View {
     let product: Product
     @State private var selectedImage: String?
-    
+    @EnvironmentObject var cartStore: CartStore
     
     var body: some View {
         NavigationStack {
@@ -91,6 +91,16 @@ struct ProductDetailView: View {
                 .padding()
             }
             .navigationTitle("Details")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        cartStore.add(product: product)
+                    } label: {
+                        Image(systemName: "cart.badge.plus")
+                    }
+
+                }
+            }
             .navigationBarTitleDisplayMode(.inline)
         }
         .onAppear {

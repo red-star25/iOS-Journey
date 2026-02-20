@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct XMartApp: App {
+    @StateObject private var cartStore = CartStore()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(cartStore)
         }
     }
 }
